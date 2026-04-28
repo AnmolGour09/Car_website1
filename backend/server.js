@@ -6,7 +6,9 @@ import { initDb, getPool } from './db.js';
 const app = express();
 const PORT = 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: "https://main.d2ulwf1p11m13e.amplifyapp.com"
+}));
 app.use(express.json());
 
 // Start the HTTP server immediately so the port is open
