@@ -4,7 +4,7 @@ import bcrypt from 'bcryptjs';
 import { initDb, getPool } from './db.js';
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(cors({
   origin: "https://main.d2ulwf1p11m13e.amplifyapp.com"
