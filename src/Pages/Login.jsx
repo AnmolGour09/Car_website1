@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
-const API_URL = "/api";
-
+const API_URL = "https://car-backend.onrender.com/api";
 export default function Login() {
   const navigate = useNavigate();
   const { login } = useAuth();
