@@ -5,11 +5,12 @@ import Nav from "./Components/Nav/Nav";
 import Index from "./Components/Page/Index";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
+import Cars from "./Pages/Cars";
+import UserInterests from "./Pages/UserInterests";
+import AdminDashboard from "./Pages/AdminDashboard";
 import Footer from "./Components/Footer/Footer";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import PublicRoute from "./Components/PublicRoute";
-import logo from "./assets/logo.png";
-import applogo from "./assets/gears-138199.gif";
 
 
 function App() {
@@ -42,6 +43,9 @@ function App() {
       <Routes>
         <Route element={<ProtectedRoute />}>
           <Route path="/" element={<Index />} />
+          <Route path="/cars" element={<Cars />} />
+          <Route path="/my-interests" element={<UserInterests />} />
+          <Route path="/admin" element={<AdminDashboard />} />
         </Route>
         <Route element={<PublicRoute />}>
           <Route path="/login" element={<Login />} />

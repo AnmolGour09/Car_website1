@@ -51,6 +51,34 @@ function Nav() {
             </a>
           </li>
           <li>
+            <Link
+              to="/cars"
+              className="text-lg font-semibold cursor-pointer transition hover:text-red-400"
+            >
+              Cars
+            </Link>
+          </li>
+          {user && (
+            <li>
+              <Link
+                to="/my-interests"
+                className="text-lg font-semibold cursor-pointer transition hover:text-red-400"
+              >
+                My Interests
+              </Link>
+            </li>
+          )}
+          {user && user.role === "admin" && (
+            <li>
+              <Link
+                to="/admin"
+                className="text-lg font-semibold cursor-pointer transition hover:text-red-400"
+              >
+                Admin
+              </Link>
+            </li>
+          )}
+          <li>
             <a
               href="#Help"
               className="text-lg font-semibold cursor-pointer transition hover:text-red-400"
@@ -112,6 +140,19 @@ function Nav() {
             <li className="text-lg font-semibold transition cursor-pointer hover:text-red-500">
               Showroom
             </li>
+            <li className="text-lg font-semibold transition cursor-pointer hover:text-red-500">
+              <Link to="/cars">Cars</Link>
+            </li>
+            {user && (
+              <li className="text-lg font-semibold transition cursor-pointer hover:text-red-500">
+                <Link to="/my-interests">My Interests</Link>
+              </li>
+            )}
+            {user && user.role === "admin" && (
+              <li className="text-lg font-semibold transition cursor-pointer hover:text-red-500">
+                <Link to="/admin">Admin</Link>
+              </li>
+            )}
             <li className="text-lg font-semibold transition cursor-pointer hover:text-red-500">
               Help
             </li>
